@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './shared/material/material.module';
+import { MatButtonModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -14,9 +17,12 @@ import { FooterComponent } from './components/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule,
+    MatButtonModule,
+    BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [MaterialModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
